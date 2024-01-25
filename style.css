@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+:root{
+--Green:hsl(75,94%,57%);
+--Grey:hsl(0,0%,20%);
+--DarkGrey:hsl(0,0%,12%);
+--OffBlack:hsl(0,0%,8%);
+}
+
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+font-family: 'Inter', sans-serif;
+min-height: 100vh;
+display: grid;
+place-items: center;
+background-color: var(--OffBlack);
+}
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+
+/* card */
+
+.card{
+    background-color: var(--DarkGrey);
+    padding: 25px;
+    border-radius: 12.5px;
+    min-width: 300px;
+}
+
+/* card */
+
+/* card header */
+.card__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.card__header figure img{
+    border-radius: 50%;
+    max-width: 85px;
+    max-height: 85px;
+}
+.card__header_title{
+    text-align: center;
+}
+.card__header_title h1{
+    font-size: 1.7rem;
+    color: #ebebeb;
+}
+.card__header_title div{
+    color: var(--Green);
+}
+.card__header p{
+    color: #ebebeb;
+}
+/* card header */
+
+/* card links */
+
+.card__links{
+    padding-left: 0;
+    list-style: none;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 20px;
+}
+.card__links li a {
+    text-decoration: none;
+    color: #ebebeb;
+    font-weight: 600;
+}
+.card__links li  {
+    width: 100%;
+    background-color: var(--Grey);
+    text-align: center;
+    padding-block: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.card__links li:hover{
+    background-color: var(--Green);
+}
+.card__links li:hover a{
+    color: var(--DarkGrey);
+}
+
+/* card links */
